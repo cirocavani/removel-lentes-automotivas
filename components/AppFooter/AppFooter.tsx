@@ -143,7 +143,7 @@ export default function AppFooter() {
     <footer className={classes.footer}>
       <Container className={classes.inner}>
         <div className={classes.logo}>
-          <Text size={22} color="red">Removel Lentes Automotivas</Text>
+          <Text size={20} color="red">Removel Lentes Automotivas</Text>
           <Text size="xs" color="dimmed" className={classes.description}>
             A 30 anos no mercado de peças e acessórios automotivos
           </Text>

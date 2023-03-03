@@ -108,7 +108,7 @@ export default function AppHeader() {
   return (
     <Header height={0} p="lg" className={classes.root}>
       <Container className={classes.header}>
-        <Text size={22} color="red">Removel Lentes Automotivas</Text>
+        <Text size={20} color="red">Removel Lentes Automotivas</Text>
         <Group spacing={5} className={classes.links}>
           {items}
         </Group>

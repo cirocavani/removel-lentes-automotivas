@@ -1,13 +1,13 @@
 import { createStyles, ThemeIcon, Text, Box, Stack } from '@mantine/core';
 import { IconSun, IconPhone, IconMapPin, IconAt } from '@tabler/icons';
 
-type ContactIconVariant = 'white' | 'gradient';
+type ContactUsInfoVariant = 'white' | 'gradient';
 
-interface ContactIconStyles {
-  variant: ContactIconVariant;
+interface ContactUsInfoStyles {
+  variant: ContactUsInfoVariant;
 }
 
-const useStyles = createStyles((theme, { variant }: ContactIconStyles) => ({
+const useStyles = createStyles((theme, { variant }: ContactUsInfoStyles) => ({
   wrapper: {
     display: 'flex',
     alignItems: 'center',
@@ -33,11 +33,11 @@ const useStyles = createStyles((theme, { variant }: ContactIconStyles) => ({
   },
 }));
 
-interface ContactIconProps extends Omit<React.ComponentPropsWithoutRef<'div'>, 'title'> {
+interface ContactUsInfoProps extends Omit<React.ComponentPropsWithoutRef<'div'>, 'title'> {
   icon: React.FC<any>;
   title: React.ReactNode;
   description: React.ReactNode;
-  variant?: ContactIconVariant;
+  variant?: ContactUsInfoVariant;
 }
 
 function ContactIcon({
@@ -47,7 +47,7 @@ function ContactIcon({
   variant = 'gradient',
   className,
   ...others
-}: ContactIconProps) {
+}: ContactUsInfoProps) {
   const { classes, cx } = useStyles({ variant });
   return (
     <div className={cx(classes.wrapper, className)} {...others}>
@@ -71,19 +71,19 @@ function ContactIcon({
   );
 }
 
-interface ContactIconsListProps {
-  data?: ContactIconProps[];
-  variant?: ContactIconVariant;
+interface ContactUsInfoListProps {
+  data?: ContactUsInfoProps[];
+  variant?: ContactUsInfoVariant;
 }
 
-const DATA = [
+const CONTACT_INFO: ContactUsInfoProps[] = [
   { title: 'Email', description: 'adm.removel@gmail.com', icon: IconAt },
   { title: 'Telefone', description: '(11) 4992-0375', icon: IconPhone },
   { title: 'Endereço', description: 'Av Atlântica, 238 - Santo André / SP', icon: IconMapPin },
   { title: 'Horário de Trabalho', description: 'Seg à Sex 8 às 18 Sab 8 às 12', icon: IconSun },
 ];
 
-export function ContactUsInfoList({ data = DATA, variant }: ContactIconsListProps) {
+export function ContactUsInfoList({ data = CONTACT_INFO, variant }: ContactUsInfoListProps) {
   const items = data.map((item, index) => <ContactIcon key={index} variant={variant} {...item} />);
   return <Stack>{items}</Stack>;
 }
