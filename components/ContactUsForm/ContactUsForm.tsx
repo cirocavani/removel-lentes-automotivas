@@ -1,14 +1,14 @@
-import { TextInput, Textarea, Group, Title, Button, Box } from '@mantine/core';
-import { useForm } from '@mantine/form';
+import { TextInput, Textarea, Group, Title, Button, Box } from "@mantine/core";
+import { useForm } from "@mantine/form";
 
 export function ContactUsForm() {
   const form = useForm({
     initialValues: {
-      name: '',
-      phone: '',
-      email: '',
-      subject: '',
-      message: '',
+      name: "",
+      phone: "",
+      email: "",
+      subject: "",
+      message: "",
     },
     validate: {
       email: (value) => !/^\S+@\S+$/.test(value),
@@ -34,14 +34,14 @@ export function ContactUsForm() {
           placeholder="Seu nome"
           name="name"
           variant="filled"
-          {...form.getInputProps('name')}
+          {...form.getInputProps("name")}
         />
         <TextInput
           label="Telefone"
           placeholder="Seu número de telefone"
           name="phone"
           variant="filled"
-          {...form.getInputProps('phone')}
+          {...form.getInputProps("phone")}
         />
         <TextInput
           label="Email"
@@ -49,7 +49,7 @@ export function ContactUsForm() {
           name="email"
           variant="filled"
           required
-          {...form.getInputProps('email')}
+          {...form.getInputProps("email")}
         />
         <TextInput
           label="Assunto"
@@ -58,7 +58,7 @@ export function ContactUsForm() {
           name="subject"
           variant="filled"
           required
-          {...form.getInputProps('subject')}
+          {...form.getInputProps("subject")}
         />
         <Textarea
           mt="md"
@@ -69,7 +69,7 @@ export function ContactUsForm() {
           autosize
           name="message"
           variant="filled"
-          {...form.getInputProps('message')}
+          {...form.getInputProps("message")}
         />
 
         <Group position="center" mt="xl">

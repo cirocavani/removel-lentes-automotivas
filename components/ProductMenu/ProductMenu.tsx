@@ -1,23 +1,24 @@
-import { AUTOMAKER, PRODUCTS } from "@/lib/products";
+import { listCatalogMenu } from "@/lib/products";
 import { Box, NavLink } from "@mantine/core";
 import Link from "next/link";
 
 export default function ProductMenu() {
-    const items = PRODUCTS.map((product) => {
-        const subitems = AUTOMAKER.map((automaker_name, index) => (
+    const items = listCatalogMenu().map((catalog_menu) => {
+        const category = catalog_menu.category
+        const subitems = catalog_menu.automakers.map((automaker) => (
             <NavLink
-                key={index}
-                label={automaker_name}
+                key={automaker.key}
+                label={automaker.label}
                 component={Link}
-                href={`/produtos/${product.path_key}/${automaker_name}`}
+                href={`/produtos/${category.key}/${automaker.key}`}
                 p={0}
             />
         ));
 
         return (
             <NavLink
-                key={product.name}
-                label={product.name}
+                key={category.key}
+                label={category.label}
                 childrenOffset={28}
             >
                 {subitems}
@@ -26,7 +27,7 @@ export default function ProductMenu() {
     });
 
     return (
-        <Box sx={{ width: 240 }} p="md">
+        <Box sx={{ width: 150 }} p="md">
             {items}
         </Box>
     )

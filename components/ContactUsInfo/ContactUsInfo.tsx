@@ -1,7 +1,7 @@
-import { createStyles, ThemeIcon, Text, Box, Stack } from '@mantine/core';
-import { IconSun, IconPhone, IconMapPin, IconAt } from '@tabler/icons';
+import { createStyles, ThemeIcon, Text, Box, Stack } from "@mantine/core";
+import { IconSun, IconPhone, IconMapPin, IconAt } from "@tabler/icons-react";
 
-type ContactUsInfoVariant = 'white' | 'gradient';
+type ContactUsInfoVariant = "white" | "gradient";
 
 interface ContactUsInfoStyles {
   variant: ContactUsInfoVariant;
@@ -9,31 +9,31 @@ interface ContactUsInfoStyles {
 
 const useStyles = createStyles((theme, { variant }: ContactUsInfoStyles) => ({
   wrapper: {
-    display: 'flex',
-    alignItems: 'center',
+    display: "flex",
+    alignItems: "center",
     color: theme.white,
   },
 
   icon: {
     marginRight: theme.spacing.md,
     backgroundImage:
-      variant === 'gradient'
+      variant === "gradient"
         ? `linear-gradient(135deg, ${theme.colors[theme.primaryColor][4]} 0%, ${theme.colors[theme.primaryColor][6]
         } 100%)`
-        : 'none',
-    backgroundColor: 'transparent',
+        : "none",
+    backgroundColor: "transparent",
   },
 
   title: {
-    color: variant === 'gradient' ? theme.colors.gray[6] : theme.colors[theme.primaryColor][0],
+    color: variant === "gradient" ? theme.colors.gray[6] : theme.colors[theme.primaryColor][0],
   },
 
   description: {
-    color: variant === 'gradient' ? theme.black : theme.white,
+    color: variant === "gradient" ? theme.black : theme.white,
   },
 }));
 
-interface ContactUsInfoProps extends Omit<React.ComponentPropsWithoutRef<'div'>, 'title'> {
+interface ContactUsInfoProps extends Omit<React.ComponentPropsWithoutRef<"div">, "title"> {
   icon: React.FC<any>;
   title: React.ReactNode;
   description: React.ReactNode;
@@ -44,14 +44,14 @@ function ContactIcon({
   icon: Icon,
   title,
   description,
-  variant = 'gradient',
+  variant = "gradient",
   className,
   ...others
 }: ContactUsInfoProps) {
   const { classes, cx } = useStyles({ variant });
   return (
     <div className={cx(classes.wrapper, className)} {...others}>
-      {variant === 'gradient' ? (
+      {variant === "gradient" ? (
         <ThemeIcon size={40} radius="md" className={classes.icon}>
           <Icon size={24} />
         </ThemeIcon>
@@ -77,10 +77,10 @@ interface ContactUsInfoListProps {
 }
 
 const CONTACT_INFO: ContactUsInfoProps[] = [
-  { title: 'Email', description: 'adm.removel@gmail.com', icon: IconAt },
-  { title: 'Telefone', description: '(11) 4992-0375', icon: IconPhone },
-  { title: 'Endereço', description: 'Av Atlântica, 238 - Santo André / SP', icon: IconMapPin },
-  { title: 'Horário de Trabalho', description: 'Seg à Sex 8 às 18 Sab 8 às 12', icon: IconSun },
+  { title: "Email", description: "vendas@removellentesautomotivas.com.br", icon: IconAt },
+  { title: "Telefone", description: "(11) 4992-0375", icon: IconPhone },
+  { title: "Endereço", description: "Rua Rio Negro, 44 - CEP 09060-380 - Santo André / SP", icon: IconMapPin },
+  { title: "Horário de Trabalho", description: "Seg à Sex 8 às 18 Sab 8 às 12", icon: IconSun },
 ];
 
 export function ContactUsInfoList({ data = CONTACT_INFO, variant }: ContactUsInfoListProps) {

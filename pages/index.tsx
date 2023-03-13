@@ -1,12 +1,12 @@
-import { MainCarousel } from '@/components/MainCarousel/MainCarousel';
-import { Title } from '@mantine/core';
+import { MainCarousel } from "@/components/MainCarousel/MainCarousel";
+import { Container, Text } from "@mantine/core";
 
 export default function Home() {
-  return (
-    <>
-      <MainCarousel />
+    return (
+        <Container>
+            {/* <MainCarousel /> */}
 
-      <Title>Outros Destaques...</Title>
-    </>
-  )
+            <Text>Site em Construção</Text>
+        </Container>
+    )
 }
