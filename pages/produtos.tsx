@@ -6,10 +6,10 @@ import { GetStaticProps } from "next";
 
 interface ProductsProps {
     categories: Category[]
-    products: ProductItem[]
+    n_products: number
 }
 
-export default function Products({ categories, products }: ProductsProps) {
+export default function Products({ categories, n_products }: ProductsProps) {
     const cards = categories.map((category) => (
         <Card
             key={category.key}
@@ -34,10 +34,10 @@ export default function Products({ categories, products }: ProductsProps) {
 
     return (
         <Container>
-            <Breadcrumbs p="sm">
+            <Breadcrumbs styles={{ root: { flexWrap: "wrap" } }} p="sm">
                 <Anchor component={Link} href="/produtos" key="produtos">Produtos</Anchor>
             </Breadcrumbs>
-            <Text p="sm">{`Produtos encontrados ${products.length}`}</Text>
+            <Text p="sm">{`Produtos encontrados ${n_products}`}</Text>
             <SimpleGrid
                 cols={4}
                 spacing="lg"
@@ -58,11 +58,12 @@ export const getStaticProps: GetStaticProps<ProductsProps> = async (
 ) => {
     const categories: Category[] = listCategories()
     const products: ProductItem[] = listProducts()
+    const n_products = products.length
 
     return {
         props: {
             categories,
-            products,
+            n_products,
         } as ProductsProps
     }
 }

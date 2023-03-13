@@ -12,7 +12,7 @@ interface ProductProps {
 export default function ProductCatalog({ product, category, automaker }: ProductProps) {
     return (
         <Container>
-            <Breadcrumbs p="sm">
+            <Breadcrumbs styles={{ root: { flexWrap: "wrap" } }} p="sm">
                 <Anchor component={Link} href="/produtos" key="produtos">Produtos</Anchor>
                 <Anchor component={Link} href={`/produtos/${category.key}`} key="category">{category.label}</Anchor>
                 <Anchor component={Link} href={`/produtos/${category.key}/${automaker.key}`} key="automaker">{automaker.label}</Anchor>
@@ -24,7 +24,6 @@ export default function ProductCatalog({ product, category, automaker }: Product
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-    // Return a list of possible value for category_id and automaker
     const paths = listProducts().map((product) => {
         return {
             "params": {
