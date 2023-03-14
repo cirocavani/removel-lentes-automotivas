@@ -1,8 +1,7 @@
 import { listCatalogKeys, listCatalogProducts, CatalogKey, CatalogItem, Category, Automaker, getCategory, getAutomaker } from "@/lib/products"
-import { Anchor, Breadcrumbs, Card, Container, SimpleGrid, Text } from "@mantine/core"
+import { Anchor, Breadcrumbs, Card, Container, Image, SimpleGrid, Text } from "@mantine/core"
 import { GetStaticPaths, GetStaticProps } from "next"
 import Link from "next/link";
-import Image from "next/image";
 
 interface ProductCatalogProps {
     products: CatalogItem[]
@@ -25,8 +24,8 @@ export default function ProductCatalog({ products, category, automaker }: Produc
             <Card.Section>
                 <Image
                     src={product.image}
-                    height={160}
                     alt={product.title}
+                    fit="contain"
                 />
             </Card.Section>
             <Text>{product.title}</Text>

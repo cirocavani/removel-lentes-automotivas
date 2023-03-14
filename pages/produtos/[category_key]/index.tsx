@@ -1,8 +1,7 @@
 import { Automaker, Category, getCategory, listAutomakers, listCategories, listProducts, ProductItem } from "@/lib/products";
-import { Anchor, Breadcrumbs, Card, Container, SimpleGrid, Text } from "@mantine/core";
-import Link from "next/link";
-import Image from "next/image";
+import { Anchor, Breadcrumbs, Card, Container, Image, SimpleGrid, Text } from "@mantine/core";
 import { GetStaticPaths, GetStaticProps } from "next";
+import Link from "next/link";
 
 interface ProductsCategoryProps {
     category: Category
@@ -25,8 +24,9 @@ export default function ProductsCategory({ category, automakers, n_products }: P
             <Card.Section>
                 <Image
                     src={automaker.image}
-                    height={160}
                     alt={automaker.label}
+                    fit="contain"
+                    bg="#fff"
                 />
             </Card.Section>
             <Text>{automaker.label}</Text>

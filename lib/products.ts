@@ -1,9 +1,5 @@
 import _PRODUCT_DATA from "./products.json"
-import catalog_image from "../public/images/lente-cover.webp"
-import lente_cristal_image from "../public/images/lente-cristal.webp"
-import lente_azul_image from "../public/images/lente-azul.webp"
-import brand_image from "../public/images/removel.webp"
-import { StaticImageData } from "next/image"
+
 
 export {
     getProduct,
@@ -43,13 +39,13 @@ type ProductItem = {
 type Category = {
     label: string
     key: string
-    image: StaticImageData
+    image: string
 }
 
 type Automaker = {
     label: string
     key: string
-    image: StaticImageData
+    image: string
 }
 
 type CatalogMenu = {
@@ -64,7 +60,7 @@ type CatalogKey = {
 
 type CatalogItem = {
     title: string
-    image: StaticImageData
+    image: string
     category: Category
     automaker: Automaker
     sku: string
@@ -73,36 +69,38 @@ type CatalogItem = {
 const PRODUCT_DATA = _PRODUCT_DATA as ProductItem[]
 
 const CATEGORIES: Category[] = [
-    { "label": "Lente Cristal", "key": "lente-cristal", "image": lente_cristal_image },
-    { "label": "Lente Azul", "key": "lente-azul", "image": lente_azul_image }
+    { "label": "Retrovisor Lente Cristal", "key": "retrovisor-lente-cristal", "image": "/images/retrovisor-lente-cristal.png" },
+    { "label": "Retrovisor Lente Azul", "key": "retrovisor-lente-azul", "image": "/images/retrovisor-lente-azul.png" }
 ]
 
+// https://www.carlogos.org/
+// https://commons.wikimedia.org/wiki/File:Asia_Motors_Logo.svg
 const AUTOMAKERS: Automaker[] = [
-    { "label": "ASIA", "key": "ASIA", "image": brand_image },
-    { "label": "AUDI", "key": "AUDI", "image": brand_image },
-    { "label": "BMW", "key": "BMW", "image": brand_image },
-    { "label": "CHERY", "key": "CHERY", "image": brand_image },
-    { "label": "CHEVROLET", "key": "CHEVROLET", "image": brand_image },
-    { "label": "CITROËN", "key": "CITROEN", "image": brand_image },
-    { "label": "DODGE", "key": "DODGE", "image": brand_image },
-    { "label": "FIAT", "key": "FIAT", "image": brand_image },
-    { "label": "FORD", "key": "FORD", "image": brand_image },
-    { "label": "HONDA", "key": "HONDA", "image": brand_image },
-    { "label": "HYUNDAI", "key": "HYUNDAI", "image": brand_image },
-    { "label": "IVECO", "key": "IVECO", "image": brand_image },
-    { "label": "JAC", "key": "JAC", "image": brand_image },
-    { "label": "JEEP", "key": "JEEP", "image": brand_image },
-    { "label": "KIA", "key": "KIA", "image": brand_image },
-    { "label": "LAND ROVER", "key": "LAND-ROVER", "image": brand_image },
-    { "label": "MERCEDES-BENZ", "key": "MERCEDES-BENZ", "image": brand_image },
-    { "label": "MITSUBISHI", "key": "MITSUBISHI", "image": brand_image },
-    { "label": "NISSAN", "key": "NISSAN", "image": brand_image },
-    { "label": "PEUGEOT", "key": "PEUGEOT", "image": brand_image },
-    { "label": "RENAULT", "key": "RENAULT", "image": brand_image },
-    { "label": "SUZUKI", "key": "SUZUKI", "image": brand_image },
-    { "label": "TOYOTA", "key": "TOYOTA", "image": brand_image },
-    { "label": "VOLKSWAGEN", "key": "VOLKSWAGEN", "image": brand_image },
-    { "label": "VOLVO", "key": "VOLVO", "image": brand_image }
+    { "label": "ASIA", "key": "ASIA", "image": "/images/asia-logo.png" },
+    { "label": "AUDI", "key": "AUDI", "image": "/images/audi-logo.png" },
+    { "label": "BMW", "key": "BMW", "image": "/images/bmw-logo.png" },
+    { "label": "CHERY", "key": "CHERY", "image": "/images/chery-logo.png" },
+    { "label": "CHEVROLET", "key": "CHEVROLET", "image": "/images/chevrolet-logo.png" },
+    { "label": "CITROËN", "key": "CITROEN", "image": "/images/citroen-logo.png" },
+    { "label": "DODGE", "key": "DODGE", "image": "/images/dodge-logo.png" },
+    { "label": "FIAT", "key": "FIAT", "image": "/images/fiat-logo.png" },
+    { "label": "FORD", "key": "FORD", "image": "/images/ford-logo.png" },
+    { "label": "HONDA", "key": "HONDA", "image": "/images/honda-logo.png" },
+    { "label": "HYUNDAI", "key": "HYUNDAI", "image": "/images/hyundai-logo.png" },
+    { "label": "IVECO", "key": "IVECO", "image": "/images/iveco-logo.png" },
+    { "label": "JAC", "key": "JAC", "image": "/images/jac-logo.png" },
+    { "label": "JEEP", "key": "JEEP", "image": "/images/jeep-logo.png" },
+    { "label": "KIA", "key": "KIA", "image": "/images/kia-logo.png" },
+    { "label": "LAND ROVER", "key": "LAND-ROVER", "image": "/images/land-rover-logo.png" },
+    { "label": "MERCEDES-BENZ", "key": "MERCEDES-BENZ", "image": "/images/mercedes-benz-logo.png" },
+    { "label": "MITSUBISHI", "key": "MITSUBISHI", "image": "/images/mitsubishi-logo.png" },
+    { "label": "NISSAN", "key": "NISSAN", "image": "/images/nissan-logo.png" },
+    { "label": "PEUGEOT", "key": "PEUGEOT", "image": "/images/peugeot-logo.png" },
+    { "label": "RENAULT", "key": "RENAULT", "image": "/images/renault-logo.png" },
+    { "label": "SUZUKI", "key": "SUZUKI", "image": "/images/suzuki-logo.png" },
+    { "label": "TOYOTA", "key": "TOYOTA", "image": "/images/toyota-logo.png" },
+    { "label": "VOLKSWAGEN", "key": "VOLKSWAGEN", "image": "/images/volkswagen-logo.png" },
+    { "label": "VOLVO", "key": "VOLVO", "image": "/images/volvo-logo.png" }
 ]
 
 
@@ -181,7 +179,7 @@ function listCatalogProducts(catalog_key: CatalogKey): CatalogItem[] {
         (product) => {
             return {
                 "title": product.catalogTitle,
-                "image": catalog_image,
+                "image": "/images/removel.webp",
                 "category": category,
                 "automaker": automaker,
                 "sku": product.sku

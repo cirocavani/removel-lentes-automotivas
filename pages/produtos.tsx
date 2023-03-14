@@ -1,7 +1,6 @@
 import { Category, listCategories, listProducts, ProductItem } from "@/lib/products";
-import { Anchor, Breadcrumbs, Card, Center, Container, SimpleGrid, Text } from "@mantine/core";
+import { Anchor, Breadcrumbs, Card, Container, Image, SimpleGrid, Text } from "@mantine/core";
 import Link from "next/link";
-import Image from "next/image";
 import { GetStaticProps } from "next";
 
 interface ProductsProps {
@@ -24,8 +23,8 @@ export default function Products({ categories, n_products }: ProductsProps) {
             <Card.Section>
                 <Image
                     src={category.image}
-                    height={160}
                     alt={category.label}
+                    fit="contain"
                 />
             </Card.Section>
             <Text>{category.label}</Text>

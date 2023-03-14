@@ -146,7 +146,7 @@ export default function AppFooter() {
         <div className={classes.logo}>
           <Text size={20} color="red">Removel Lentes Automotivas</Text>
           <Text size="xs" color="dimmed" className={classes.description}>
-            Há 30 anos no mercado de peças e acessórios automotivos
+            Há 40 anos no mercado de peças e acessórios automotivos
           </Text>
         </div>
         <div className={classes.groups}>{groups}</div>

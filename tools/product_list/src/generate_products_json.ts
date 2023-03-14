@@ -20,9 +20,9 @@ type ProductItem = {
 function update_item(item: ProductItem) {
     const code = item.sku.slice(0, 2)
     if (code === "LC") {
-        item.category = "Lente Cristal"
+        item.category = "Retrovisor Lente Cristal"
     } else if (code === "LA") {
-        item.category = "Lente Azul"
+        item.category = "Retrovisor Lente Azul"
     } else {
         item.category = ""
     }
