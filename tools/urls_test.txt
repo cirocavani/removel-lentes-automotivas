@@ -1,0 +1,22 @@
+# htaccess rewrite test
+
+# 301
+http://www.removellentesautomotivas.com.br
+http://www.removellentesautomotivas.com.br/empresa
+http://www.removellentesautomotivas.com.br/produtos
+http://www.removellentesautomotivas.com.br/contato
+https://www.removellentesautomotivas.com.br
+https://www.removellentesautomotivas.com.br/empresa
+https://www.removellentesautomotivas.com.br/produtos
+https://www.removellentesautomotivas.com.br/contato
+
+http://removellentesautomotivas.com.br
+http://removellentesautomotivas.com.br/empresa
+http://removellentesautomotivas.com.br/produtos
+http://removellentesautomotivas.com.br/contato
+
+# 200
+https://removellentesautomotivas.com.br
+https://removellentesautomotivas.com.br/empresa
+https://removellentesautomotivas.com.br/produtos
+https://removellentesautomotivas.com.br/contato

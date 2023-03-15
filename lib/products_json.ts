@@ -2,7 +2,6 @@
 // https://blog.tericcabrel.com/read-csv-node-typescript/
 
 import * as fs from "fs";
-import * as path from "path";
 import { parse } from "csv-parse/sync";
 
 type Side = "ESQUERDO" | "DIREITO"
@@ -40,7 +39,7 @@ function slugify(s: string): string {
         .toLowerCase();
 };
 
-function make_item(item: ProductItem) {
+function makeProductItem(item: ProductItem) {
     const code = item.sku.slice(0, 2)
     if (code === "LC") {
         item.category = "Retrovisor Lente Cristal"
@@ -56,23 +55,20 @@ function make_item(item: ProductItem) {
     return item
 }
 
-(() => {
-    const csv_file_path = path.resolve(__dirname, "..", "data", "ProductList.csv");
-    const output_file_path = path.resolve(__dirname, "..", "data", "products.json");
-
+export function generateProductsJson(csv_file_path: string, output_file_path: string) {
     const csv_content = fs.readFileSync(csv_file_path, { encoding: "utf-8" });
     const headers = ["sku", "automaker", "model", "side"];
 
     let result: ProductItem[] = parse(csv_content, {
         delimiter: ",",
         columns: headers,
-        on_record: make_item,
+        on_record: makeProductItem,
     });
 
     result = result.flatMap((item: ProductItem) => {
         let item2: ProductItem = JSON.parse(JSON.stringify(item))
         item2.sku = item2.sku.replace("LC", "LA")
-        item2 = make_item(item2)
+        item2 = makeProductItem(item2)
         return [item, item2]
     })
 
@@ -82,4 +78,4 @@ function make_item(item: ProductItem) {
             console.log(err);
         }
     });
-})();
+}

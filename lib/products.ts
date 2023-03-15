@@ -1,5 +1,6 @@
-import nextConfig from '../next.config'
-import _PRODUCT_DATA from "./products.json"
+import nextConfig from "../next.config.mjs"
+
+import _PRODUCT_DATA from "./products.json" assert { type: "json" };
 
 
 export {

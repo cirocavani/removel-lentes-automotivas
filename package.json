@@ -2,11 +2,14 @@
   "name": "removel-lentes-automotivas-site",
   "version": "0.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "generate-products": "ts-node tools/generate_products_json.ts",
+    "generate-sitemap": "ts-node tools/generate_sitemap.ts"
   },
   "dependencies": {
     "@emotion/react": "^11.10.6",
@@ -28,5 +31,9 @@
     "react-dom": "18.2.0",
     "sharp": "^0.31.3",
     "typescript": "4.9.5"
+  },
+  "devDependencies": {
+    "csv-parse": "^5.3.6",
+    "ts-node": "^10.9.1"
   }
 }
