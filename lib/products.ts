@@ -28,6 +28,7 @@ export type {
 type Side = "ESQUERDO" | "DIREITO"
 
 type ProductItem = {
+    key: string
     sku: string
     category: string
     automaker: string
@@ -60,6 +61,7 @@ type CatalogKey = {
 }
 
 type CatalogItem = {
+    key: string
     title: string
     image: string
     category: Category
@@ -107,8 +109,8 @@ const AUTOMAKERS: Automaker[] = [
 ]
 
 
-function getProduct(sku: string): ProductItem | undefined {
-    return PRODUCT_DATA.find((product) => { return product.sku === sku });
+function getProduct(product_key: string): ProductItem | undefined {
+    return PRODUCT_DATA.find((product) => { return product.key === product_key });
 }
 
 function getCategory(category_key?: string): Category | undefined {
@@ -181,6 +183,7 @@ function listCatalogProducts(catalog_key: CatalogKey): CatalogItem[] {
     return listProducts(catalog_key.category_key, catalog_key.automaker_key).map(
         (product) => {
             return {
+                "key": product.key,
                 "title": product.catalogTitle,
                 "image": `${IMAGE_PATH}/removel.webp`,
                 "category": category,

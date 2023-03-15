@@ -1,4 +1,4 @@
-import { Automaker, Category, getAutomaker, getAutomakerByLabel, getCategory, getCategoryByLabel, getProduct, listProducts, ProductItem } from "@/lib/products"
+import { Automaker, Category, getAutomakerByLabel, getCategoryByLabel, getProduct, listProducts, ProductItem } from "@/lib/products"
 import { Anchor, Breadcrumbs, Container, Title } from "@mantine/core";
 import { GetStaticPaths, GetStaticProps } from "next";
 import Link from "next/link";
@@ -27,9 +27,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     const paths = listProducts().map((product) => {
         return {
             "params": {
-                "category_key": getCategoryByLabel(product.category)?.key,
-                "automaker_key": getAutomakerByLabel(product.automaker)?.key,
-                "sku": product.sku,
+                "product_key": product.key,
             }
         }
     });
@@ -43,13 +41,11 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps<ProductProps> = async (
     context
 ) => {
-    const category_key = context.params?.category_key as string
-    const automaker_key = context.params?.automaker_key as string
-    const sku = context.params?.sku as string
+    const product_key = context.params?.product_key as string
 
-    const product = getProduct(sku)
-    const category = getCategory(category_key)
-    const automaker = getAutomaker(automaker_key)
+    const product = getProduct(product_key)
+    const category = getCategoryByLabel(product?.category)
+    const automaker = getAutomakerByLabel(product?.automaker)
 
     return {
         props: {

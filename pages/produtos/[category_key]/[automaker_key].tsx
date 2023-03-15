@@ -12,14 +12,14 @@ interface ProductCatalogProps {
 export default function ProductCatalog({ products, category, automaker }: ProductCatalogProps) {
     const cards = products.map((product) => (
         <Card
-            key={product.sku}
+            key={product.key}
             ta="center"
             shadow="sm"
             padding="lg"
             radius="md"
             withBorder
             component={Link}
-            href={`/produtos/${product.category.key}/${product.automaker.key}/${product.sku}`}
+            href={`/${product.key}`}
         >
             <Card.Section>
                 <Image
