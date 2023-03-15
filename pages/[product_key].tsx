@@ -16,7 +16,7 @@ export default function ProductCatalog({ product, category, automaker }: Product
                 <Anchor component={Link} href="/produtos" key="produtos">Produtos</Anchor>
                 <Anchor component={Link} href={`/produtos/${category.key}`} key="category">{category.label}</Anchor>
                 <Anchor component={Link} href={`/produtos/${category.key}/${automaker.key}`} key="automaker">{automaker.label}</Anchor>
-                <Anchor component={Link} href={`/produtos/${category.key}/${automaker.key}/${product.sku}`} key="sku">{product.catalogTitle}</Anchor>
+                <Anchor component={Link} href={`/${product.key}`} key="product">{product.catalogTitle}</Anchor>
             </Breadcrumbs>
             <Title p="sm">{product.title}</Title>
         </Container>
