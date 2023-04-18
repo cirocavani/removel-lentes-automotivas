@@ -107,15 +107,15 @@ const CONTACT_INFO: ContactUsInfoProps[] = [
     {
         title: "Endereço",
         description: "Rua Rio Negro, 44 - CEP 09060-380 - Santo André / SP",
-        link: "https://goo.gl/maps/zXAaYCPBEuNsWt937",
+        link: "https://goo.gl/maps/NHpBV8zTxxsr14fq7",
         icon: IconMapPin,
     },
-    {
-        title: "Horário de Trabalho",
-        description: "Seg à Sex 8 às 18 Sab 8 às 12",
-        link: "/",
-        icon: IconSun
-    },
+    // {
+    //     title: "Horário de Trabalho",
+    //     description: "Seg à Sex 8 às 18 Sab 8 às 12",
+    //     link: "/contato",
+    //     icon: IconSun
+    // },
 ];
 
 export function ContactUsInfoList({ data = CONTACT_INFO, variant }: ContactUsInfoListProps) {

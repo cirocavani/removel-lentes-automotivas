@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "generate-products": "ts-node tools/generate_products_json.ts",
@@ -14,26 +14,26 @@
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/server": "^11.10.0",
-    "@mantine/carousel": "^6.0.1",
-    "@mantine/core": "^6.0.1",
-    "@mantine/form": "^6.0.1",
-    "@mantine/hooks": "^6.0.1",
-    "@mantine/next": "^6.0.1",
-    "@tabler/icons-react": "^2.9.0",
-    "@types/node": "18.15.0",
-    "@types/react": "18.0.28",
+    "@mantine/carousel": "^6.0.8",
+    "@mantine/core": "^6.0.8",
+    "@mantine/form": "^6.0.8",
+    "@mantine/hooks": "^6.0.8",
+    "@mantine/next": "^6.0.8",
+    "@tabler/icons-react": "^2.16.0",
+    "@types/node": "18.15.11",
+    "@types/react": "18.0.37",
     "@types/react-dom": "18.0.11",
-    "embla-carousel-react": "^7.0.9",
-    "eslint": "8.35.0",
-    "eslint-config-next": "13.2.4",
-    "next": "13.2.4",
+    "embla-carousel-react": "^7.1.0",
+    "eslint": "8.38.0",
+    "eslint-config-next": "13.3.0",
+    "next": "13.3.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "sharp": "^0.31.3",
-    "typescript": "4.9.5"
+    "sharp": "^0.32.0",
+    "typescript": "5.0.4"
   },
   "devDependencies": {
-    "csv-parse": "^5.3.6",
+    "csv-parse": "^5.3.8",
     "ts-node": "^10.9.1"
   }
 }

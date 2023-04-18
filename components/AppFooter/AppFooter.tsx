@@ -158,15 +158,15 @@ export default function AppFooter() {
         </Text>
 
         <Group spacing={0} className={classes.social} position="right" noWrap>
-          <ActionIcon component={Link} href="https://www.facebook.com/removel.autopecas" target="_blank" size="lg">
+          <ActionIcon component={Link} href="https://www.facebook.com/removellentesautomotivas" target="_blank" size="lg">
             <IconBrandFacebook size="1.05rem" stroke={1.5} />
           </ActionIcon>
-          <ActionIcon component={Link} href="https://www.instagram.com/removel.autopecas" target="_blank" size="lg">
+          <ActionIcon component={Link} href="https://www.instagram.com/removellentesautomotivas" target="_blank" size="lg">
             <IconBrandInstagram size="1.05rem" stroke={1.5} />
           </ActionIcon>
-          <ActionIcon component={Link} href="https://www.youtube.com/@removelautopecas3168" target="_blank" size="lg">
+          {/* <ActionIcon component={Link} href="https://www.youtube.com/@removelautopecas3168" target="_blank" size="lg">
             <IconBrandYoutube size="1.05rem" stroke={1.5} />
-          </ActionIcon>
+          </ActionIcon> */}
         </Group>
       </Container>
     </footer>

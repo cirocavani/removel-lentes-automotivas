@@ -37,3 +37,6 @@ next-env.d.ts
 
 # generated: yarn sitemap
 public/sitemap.xml
+
+/_docs/
+/data
