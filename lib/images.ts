@@ -1,24 +1,22 @@
 import nextConfig from "../next.config.mjs"
 
-const IMAGE_PATH = `${nextConfig.basePath}/images`
+function img_path(name: string): string {
+    return `${nextConfig.basePath}/images/${name}`
+}
 
 const REMOVEL_BANNER_IMG = img_path("removel-cover.webp")
 
 const REMOVEL_CAR_IMG = img_path("removel-retrovisor-carro.png")
 
-const MAIN_CAROUSEL_DATA = [
-    img_path("main_carousel_1.webp"),
-    img_path("main_carousel_2.webp"),
-    img_path("main_carousel_3.webp"),
+const AUTOMEC_CAROUSEL_IMGS = [
+    img_path("automec_carousel_1.webp"),
+    img_path("automec_carousel_2.webp"),
+    img_path("automec_carousel_3.webp"),
 ];
-
-function img_path(name: string): string {
-    return `${IMAGE_PATH}/${name}`
-}
 
 export {
     img_path,
     REMOVEL_BANNER_IMG,
     REMOVEL_CAR_IMG,
-    MAIN_CAROUSEL_DATA,
+    AUTOMEC_CAROUSEL_IMGS,
 }

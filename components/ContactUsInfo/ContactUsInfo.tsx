@@ -1,5 +1,5 @@
 import { createStyles, ThemeIcon, Text, Box, Stack } from "@mantine/core";
-import { IconSun, IconPhone, IconMapPin, IconAt, IconBrandWhatsapp } from "@tabler/icons-react";
+import { IconPhone, IconMapPin, IconAt, IconBrandWhatsapp } from "@tabler/icons-react";
 import Link from "next/link";
 
 type ContactUsInfoVariant = "white" | "gradient";
@@ -92,6 +92,12 @@ const CONTACT_INFO: ContactUsInfoProps[] = [
         link: "mailto:vendas@removellentesautomotivas.com.br",
         icon: IconAt,
     },
+    // {
+    //     title: "WhatsApp",
+    //     description: "(11) 98422-8382",
+    //     link: "https://wa.me/5511984228382?text=Ol%C3%A1%21+estou+na+loja+REMOVEL+LENTES+AUTOMOTIVAS+e+gostaria+de+mais+informa%C3%A7%C3%B5es.",
+    //     icon: IconBrandWhatsapp,
+    // },
     {
         title: "WhatsApp",
         description: "(11) 98539-0737",
@@ -104,6 +110,12 @@ const CONTACT_INFO: ContactUsInfoProps[] = [
         link: "tel:01149920375",
         icon: IconPhone,
     },
+    // {
+    //     title: "Telefone",
+    //     description: "(11) 2325-5916",
+    //     link: "tel:01123255916",
+    //     icon: IconPhone,
+    // },
     {
         title: "Endereço",
         description: "Rua Rio Negro, 44 - CEP 09060-380 - Santo André / SP",

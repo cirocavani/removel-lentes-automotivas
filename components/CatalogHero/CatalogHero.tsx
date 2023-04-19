@@ -1,6 +1,6 @@
 import { CATALOG_2023_PDF } from '@/lib/files';
 import { REMOVEL_CAR_IMG } from '@/lib/images';
-import { IconPdf } from '@tabler/icons-react';
+import { IconLayoutGridAdd, IconPdf } from '@tabler/icons-react';
 import Link from 'next/link';
 
 import { Title, Text, Container, Button, Overlay, createStyles, rem } from '@mantine/core';
@@ -84,18 +84,18 @@ const useStyles = createStyles((theme) => ({
         },
     },
 
-    // secondaryControl: {
-    //     color: theme.white,
-    //     backgroundColor: 'rgba(255, 255, 255, .4)',
+    secondaryControl: {
+        color: theme.white,
+        backgroundColor: 'rgba(255, 255, 255, .4)',
 
-    //     '&:hover': {
-    //         backgroundColor: 'rgba(255, 255, 255, .45) !important',
-    //     },
-    // },
+        '&:hover': {
+            backgroundColor: 'rgba(255, 255, 255, .45) !important',
+        },
+    },
 }));
 
 export function CatalogHero() {
-    const { classes } = useStyles();
+    const { classes, cx } = useStyles();
 
     return (
         <div className={classes.wrapper}>
@@ -122,6 +122,15 @@ export function CatalogHero() {
                         leftIcon={<IconPdf size="0.9rem" />}
                     >
                         Baixar Catálogo
+                    </Button>
+                    <Button
+                        className={cx(classes.control, classes.secondaryControl)}
+                        size="lg"
+                        component={Link}
+                        href="/produtos"
+                        leftIcon={<IconLayoutGridAdd size="0.9rem" />}
+                    >
+                        Catálogo Online
                     </Button>
                 </div>
             </div>

@@ -1,6 +1,10 @@
-import { img_path } from "@/lib/images";
-import _PRODUCT_DATA from "./products.json" assert { type: "json" };
+import nextConfig from "../next.config.mjs"
 
+function img_path(name: string): string {
+    return `${nextConfig.basePath}/images/${name}`
+}
+
+import _PRODUCT_DATA from "./products.json" assert { type: "json" };
 
 export {
     getProduct,
