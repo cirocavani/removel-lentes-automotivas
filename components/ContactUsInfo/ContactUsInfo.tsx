@@ -98,30 +98,30 @@ const CONTACT_INFO: ContactUsInfoProps[] = [
     //     link: "https://wa.me/5511984228382?text=Ol%C3%A1%21+estou+na+loja+REMOVEL+LENTES+AUTOMOTIVAS+e+gostaria+de+mais+informa%C3%A7%C3%B5es.",
     //     icon: IconBrandWhatsapp,
     // },
-    {
-        title: "WhatsApp",
-        description: "(11) 98539-0737",
-        link: "https://wa.me/5511985390737?text=Ol%C3%A1%21+estou+na+loja+REMOVEL+LENTES+AUTOMOTIVAS+e+gostaria+de+mais+informa%C3%A7%C3%B5es.",
-        icon: IconBrandWhatsapp,
-    },
-    {
-        title: "Telefone",
-        description: "(11) 4992-0375",
-        link: "tel:01149920375",
-        icon: IconPhone,
-    },
+    // {
+    //     title: "WhatsApp",
+    //     description: "(11) 98539-0737",
+    //     link: "https://wa.me/5511985390737?text=Ol%C3%A1%21+estou+na+loja+REMOVEL+LENTES+AUTOMOTIVAS+e+gostaria+de+mais+informa%C3%A7%C3%B5es.",
+    //     icon: IconBrandWhatsapp,
+    // },
+    // {
+    //     title: "Telefone",
+    //     description: "(11) 4992-0375",
+    //     link: "tel:01149920375",
+    //     icon: IconPhone,
+    // },
     // {
     //     title: "Telefone",
     //     description: "(11) 2325-5916",
     //     link: "tel:01123255916",
     //     icon: IconPhone,
     // },
-    {
-        title: "Endereço",
-        description: "Rua Rio Negro, 44 - CEP 09060-380 - Santo André / SP",
-        link: "https://goo.gl/maps/NHpBV8zTxxsr14fq7",
-        icon: IconMapPin,
-    },
+    // {
+    //     title: "Endereço",
+    //     description: "Rua Rio Negro, 44 - CEP 09060-380 - Santo André / SP",
+    //     link: "https://goo.gl/maps/NHpBV8zTxxsr14fq7",
+    //     icon: IconMapPin,
+    // },
     // {
     //     title: "Horário de Trabalho",
     //     description: "Seg à Sex 8 às 18 Sab 8 às 12",
