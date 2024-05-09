@@ -1,4 +1,4 @@
-import { CATALOG_2023_PDF } from '@/lib/files';
+import { CATALOG_2024_PDF } from '@/lib/files';
 import { REMOVEL_CAR_IMG } from '@/lib/images';
 import { IconLayoutGridAdd, IconPdf } from '@tabler/icons-react';
 import Link from 'next/link';
@@ -103,7 +103,7 @@ export function CatalogHero() {
 
             <div className={classes.inner}>
                 <Title className={classes.title}>
-                    Catálogo de Produtos 2023
+                    Catálogo de Produtos 2024
                 </Title>
 
                 <Container size={640}>
@@ -118,7 +118,7 @@ export function CatalogHero() {
                         variant="white"
                         size="lg"
                         component={Link}
-                        href={CATALOG_2023_PDF}
+                        href={CATALOG_2024_PDF}
                         leftIcon={<IconPdf size="0.9rem" />}
                     >
                         Baixar Catálogo

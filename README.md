@@ -7,6 +7,9 @@
 ## Deploy
 
 ```sh
-export PATH=/opt/homebrew/Cellar/node\@18/18.16.0/bin/:$PATH
+brew install node
+node --version
+# v22.1.0
+
 ./deploy.sh
 ```
