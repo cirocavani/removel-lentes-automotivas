@@ -8,7 +8,7 @@ export default function Home() {
         <Container>
             <Image src={REMOVEL_BANNER_IMG} alt="Removel Lentes Automotivas" />
             <CatalogHero />
-            <AutomecCarousel />
+            {/* <AutomecCarousel /> */}
         </Container>
     )
 }
