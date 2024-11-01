@@ -1,27 +1,35 @@
-import { CATALOG_2024_PDF } from '@/lib/files';
-import { REMOVEL_CAR_IMG } from '@/lib/images';
-import { IconLayoutGridAdd, IconPdf } from '@tabler/icons-react';
-import Link from 'next/link';
+import { CATALOG_2024_2_PDF } from "@/lib/files";
+import { REMOVEL_CAR_IMG } from "@/lib/images";
+import { IconLayoutGridAdd, IconPdf } from "@tabler/icons-react";
+import Link from "next/link";
 
-import { Title, Text, Container, Button, Overlay, createStyles, rem } from '@mantine/core';
+import {
+    Title,
+    Text,
+    Container,
+    Button,
+    Overlay,
+    createStyles,
+    rem,
+} from "@mantine/core";
 
 const useStyles = createStyles((theme) => ({
     wrapper: {
-        position: 'relative',
+        position: "relative",
         paddingTop: rem(180),
         paddingBottom: rem(130),
         backgroundImage: `url(${REMOVEL_CAR_IMG})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
+        backgroundSize: "cover",
+        backgroundPosition: "center",
 
-        [theme.fn.smallerThan('xs')]: {
+        [theme.fn.smallerThan("xs")]: {
             paddingTop: rem(80),
             paddingBottom: rem(50),
         },
     },
 
     inner: {
-        position: 'relative',
+        position: "relative",
         zIndex: 1,
     },
 
@@ -33,12 +41,12 @@ const useStyles = createStyles((theme) => ({
         paddingRight: theme.spacing.md,
         color: theme.white,
         marginBottom: theme.spacing.xs,
-        textAlign: 'center',
+        textAlign: "center",
         fontFamily: `Greycliff CF, ${theme.fontFamily}`,
 
-        [theme.fn.smallerThan('xs')]: {
+        [theme.fn.smallerThan("xs")]: {
             fontSize: rem(28),
-            textAlign: 'left',
+            textAlign: "left",
         },
     },
 
@@ -48,23 +56,23 @@ const useStyles = createStyles((theme) => ({
 
     description: {
         color: theme.colors.gray[0],
-        textAlign: 'center',
+        textAlign: "center",
 
-        [theme.fn.smallerThan('xs')]: {
+        [theme.fn.smallerThan("xs")]: {
             fontSize: theme.fontSizes.md,
-            textAlign: 'left',
+            textAlign: "left",
         },
     },
 
     controls: {
         marginTop: `calc(${theme.spacing.xl} * 1.5)`,
-        display: 'flex',
-        justifyContent: 'center',
+        display: "flex",
+        justifyContent: "center",
         paddingLeft: theme.spacing.md,
         paddingRight: theme.spacing.md,
 
-        [theme.fn.smallerThan('xs')]: {
-            flexDirection: 'column',
+        [theme.fn.smallerThan("xs")]: {
+            flexDirection: "column",
         },
     },
 
@@ -72,12 +80,12 @@ const useStyles = createStyles((theme) => ({
         height: rem(42),
         fontSize: theme.fontSizes.md,
 
-        '&:not(:first-of-type)': {
+        "&:not(:first-of-type)": {
             marginLeft: theme.spacing.md,
         },
 
-        [theme.fn.smallerThan('xs')]: {
-            '&:not(:first-of-type)': {
+        [theme.fn.smallerThan("xs")]: {
+            "&:not(:first-of-type)": {
                 marginTop: theme.spacing.md,
                 marginLeft: 0,
             },
@@ -86,10 +94,10 @@ const useStyles = createStyles((theme) => ({
 
     secondaryControl: {
         color: theme.white,
-        backgroundColor: 'rgba(255, 255, 255, .4)',
+        backgroundColor: "rgba(255, 255, 255, .4)",
 
-        '&:hover': {
-            backgroundColor: 'rgba(255, 255, 255, .45) !important',
+        "&:hover": {
+            backgroundColor: "rgba(255, 255, 255, .45) !important",
         },
     },
 }));
@@ -108,7 +116,8 @@ export function CatalogHero() {
 
                 <Container size={640}>
                     <Text size="lg" className={classes.description}>
-                        Conheça todos os nossos produtos de lentes automotivas. Baixe nosso catálogo.
+                        Conheça todos os nossos produtos de lentes automotivas.
+                        Baixe nosso catálogo.
                     </Text>
                 </Container>
 
@@ -118,13 +127,16 @@ export function CatalogHero() {
                         variant="white"
                         size="lg"
                         component={Link}
-                        href={CATALOG_2024_PDF}
+                        href={CATALOG_2024_2_PDF}
                         leftIcon={<IconPdf size="0.9rem" />}
                     >
                         Baixar Catálogo
                     </Button>
                     <Button
-                        className={cx(classes.control, classes.secondaryControl)}
+                        className={cx(
+                            classes.control,
+                            classes.secondaryControl,
+                        )}
                         size="lg"
                         component={Link}
                         href="/produtos"
