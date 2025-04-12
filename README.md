@@ -7,9 +7,20 @@
 ## Deploy
 
 ```sh
-brew install node
+# Ubuntu 24.10
+
+sudo apt install -y --no-install-recommends nodejs yarnpkg libvips-dev
+
 node --version
-# v22.1.0
+
+# v20.16.0
+
+yarnpkg --version
+
+# 4.0.2
+
+yarnpkg install
+
 
 ./deploy.sh
 ```

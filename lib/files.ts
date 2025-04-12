@@ -11,9 +11,12 @@ const CATALOG_2024_PDF = file_path(
 const CATALOG_2024_2_PDF = file_path(
     "removel-lentes-automotivas-catalogo-2024_2.pdf",
 );
+const CATALOG_2025_PDF = file_path(
+    "removel-lentes-automotivas-catalogo-2025.pdf",
+);
 
 function file_path(name: string): string {
     return `${FILE_PATH}/${name}`;
 }
 
-export { file_path, CATALOG_2023_PDF, CATALOG_2024_PDF, CATALOG_2024_2_PDF };
+export { file_path, CATALOG_2023_PDF, CATALOG_2024_PDF, CATALOG_2024_2_PDF, CATALOG_2025_PDF };
